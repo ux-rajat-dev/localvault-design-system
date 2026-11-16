@@ -1,0 +1,251 @@
+/* ==========================================================================
+   LocalVault Design System — Master Design Tokens
+   Unified across all 6 foundation parts.
+   Canonical selector: [data-theme='light' | 'dark']
+   Backward compatibility: [data-lv-theme], .light, .dark, :root
+   ========================================================================== */
+
+:root,
+.light,
+[data-theme='light'],
+[data-lv-theme='light'] {
+  color-scheme: light;
+
+  /* Core Palette */
+  --lv-bg: #f8fafc;
+  --lv-surface: #ffffff;
+  --lv-surface-muted: #f1f5f9;
+  --lv-surface-inset: #eef2f6;
+  --lv-surface-sunken: #f1f5f9;
+  --lv-text: #0f172a;
+  --lv-text-muted: #64748b;
+  --lv-text-subtle: #8792a6;
+  --lv-accent: #6366f1;
+  --lv-accent-hover: #4f46e5;
+  --lv-accent-active: #4338ca;
+  --lv-accent-soft: rgba(99, 102, 241, 0.1);
+  --lv-accent-fg: #4338ca;
+  --lv-on-accent: #ffffff;
+  --lv-border: #e2e8f0;
+  --lv-border-strong: #cbd5e1;
+
+  /* State & Interaction */
+  --lv-hover: rgba(15, 23, 42, 0.05);
+  --lv-active: rgba(15, 23, 42, 0.09);
+  --lv-press: rgba(15, 23, 42, 0.09);
+  --lv-selected: #eef2ff;
+  --lv-selected-border: #c7d2fe;
+  --lv-focus: #818cf8;
+  --lv-ring: rgba(99, 102, 241, 0.22);
+  --lv-neutral: #f1f5f9;
+  --lv-neutral-hover: #e7ecf2;
+  --lv-disabled-bg: #f1f5f9;
+  --lv-backdrop: rgba(15, 23, 42, 0.32);
+  --lv-elevated: #ffffff;
+  --lv-inverse: #0f172a;
+  --lv-inverse-text: #f8fafc;
+
+  /* Semantics */
+  --lv-success: #16a34a;
+  --lv-success-hover: #15803d;
+  --lv-success-subtle: #f0fdf4;
+  --lv-success-fg: #15803d;
+  --lv-warning: #d97706;
+  --lv-warning-hover: #b45309;
+  --lv-warning-subtle: #fffbeb;
+  --lv-warning-fg: #b45309;
+  --lv-danger: #dc2626;
+  --lv-danger-hover: #b91c1c;
+  --lv-danger-active: #991b1b;
+  --lv-danger-subtle: #fef2f2;
+  --lv-danger-fg: #dc2626;
+  --lv-danger-ring: rgba(220, 38, 38, 0.18);
+  --lv-info: #0284c7;
+  --lv-info-hover: #0369a1;
+  --lv-info-subtle: #f0f9ff;
+  --lv-info-fg: #0284c7;
+
+  /* Feedback Mix Ratios */
+  --lv-subtle-mix: 12%;
+  --lv-border-mix: 28%;
+  --lv-skeleton: #e2e8f0;
+  --lv-skeleton-shine: rgba(255, 255, 255, 0.6);
+
+  /* Shadows */
+  --lv-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --lv-shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --lv-shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.12);
+  --lv-shadow-menu: 0 0 0 1px rgba(15, 23, 42, 0.04), 0 4px 8px -2px rgba(15, 23, 42, 0.08), 0 12px 24px -4px rgba(15, 23, 42, 0.12);
+  --lv-shadow-dialog: 0 0 0 1px rgba(15, 23, 42, 0.05), 0 12px 24px -8px rgba(15, 23, 42, 0.12), 0 24px 48px -12px rgba(15, 23, 42, 0.18);
+
+  /* Backward Compatibility Aliases for Part 01 */
+  --lv-color-app: var(--lv-bg);
+  --lv-color-surface: var(--lv-surface);
+  --lv-color-surface-muted: var(--lv-surface-muted);
+  --lv-color-surface-inset: var(--lv-surface-inset);
+  --lv-color-fg: var(--lv-text);
+  --lv-color-fg-secondary: var(--lv-text-muted);
+  --lv-color-fg-muted: var(--lv-text-subtle);
+  --lv-color-accent: var(--lv-accent);
+  --lv-color-accent-hover: var(--lv-accent-hover);
+  --lv-color-accent-active: var(--lv-accent-active);
+  --lv-color-accent-subtle: var(--lv-selected);
+  --lv-color-accent-fg: var(--lv-accent-fg);
+  --lv-color-on-accent: var(--lv-on-accent);
+  --lv-color-border: var(--lv-border);
+  --lv-color-border-strong: var(--lv-border-strong);
+  --lv-color-hover: var(--lv-hover);
+  --lv-color-selected: var(--lv-selected);
+  --lv-color-selected-border: var(--lv-selected-border);
+  --lv-color-focus: var(--lv-focus);
+  --lv-color-success: var(--lv-success);
+  --lv-color-success-subtle: var(--lv-success-subtle);
+  --lv-color-warning: var(--lv-warning);
+  --lv-color-warning-subtle: var(--lv-warning-subtle);
+  --lv-color-danger: var(--lv-danger);
+  --lv-color-danger-subtle: var(--lv-danger-subtle);
+}
+
+.dark,
+[data-theme='dark'],
+[data-lv-theme='dark'] {
+  color-scheme: dark;
+
+  /* Core Palette */
+  --lv-bg: #0b1020;
+  --lv-surface: #151b2d;
+  --lv-surface-muted: #1a2135;
+  --lv-surface-inset: #10162a;
+  --lv-surface-sunken: #10162a;
+  --lv-text: #f8fafc;
+  --lv-text-muted: #94a3b8;
+  --lv-text-subtle: #64748b;
+  --lv-accent: #818cf8;
+  --lv-accent-hover: #a5b4fc;
+  --lv-accent-active: #6366f1;
+  --lv-accent-soft: rgba(129, 140, 248, 0.15);
+  --lv-accent-fg: #c7d2fe;
+  --lv-on-accent: #0b1020;
+  --lv-border: #293247;
+  --lv-border-strong: #3a4560;
+
+  /* State & Interaction */
+  --lv-hover: rgba(248, 250, 252, 0.06);
+  --lv-active: rgba(248, 250, 252, 0.1);
+  --lv-press: rgba(248, 250, 252, 0.1);
+  --lv-selected: #222a4f;
+  --lv-selected-border: #3b4486;
+  --lv-focus: #818cf8;
+  --lv-ring: rgba(129, 140, 248, 0.28);
+  --lv-neutral: #1a2135;
+  --lv-neutral-hover: #222b44;
+  --lv-disabled-bg: #151b2d;
+  --lv-backdrop: rgba(2, 6, 18, 0.6);
+  --lv-elevated: #1b2236;
+  --lv-inverse: #f8fafc;
+  --lv-inverse-text: #0f172a;
+
+  /* Semantics */
+  --lv-success: #16a34a;
+  --lv-success-hover: #22c55e;
+  --lv-success-subtle: #12261f;
+  --lv-success-fg: #4ade80;
+  --lv-warning: #d97706;
+  --lv-warning-hover: #f59e0b;
+  --lv-warning-subtle: #2a2215;
+  --lv-warning-fg: #fbbf24;
+  --lv-danger: #dc2626;
+  --lv-danger-hover: #ef4444;
+  --lv-danger-active: #b91c1c;
+  --lv-danger-subtle: #2c1820;
+  --lv-danger-fg: #f87171;
+  --lv-danger-ring: rgba(248, 113, 113, 0.2);
+  --lv-info: #0284c7;
+  --lv-info-hover: #38bdf8;
+  --lv-info-subtle: #102336;
+  --lv-info-fg: #38bdf8;
+
+  /* Feedback Mix Ratios */
+  --lv-subtle-mix: 16%;
+  --lv-border-mix: 35%;
+  --lv-skeleton: #1f273d;
+  --lv-skeleton-shine: rgba(255, 255, 255, 0.08);
+
+  /* Shadows */
+  --lv-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --lv-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.32);
+  --lv-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --lv-shadow-menu: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 8px 24px -4px rgba(0, 0, 0, 0.5);
+  --lv-shadow-dialog: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.35), 0 24px 48px -8px rgba(0, 0, 0, 0.6);
+
+  /* Backward Compatibility Aliases for Part 01 */
+  --lv-color-app: var(--lv-bg);
+  --lv-color-surface: var(--lv-surface);
+  --lv-color-surface-muted: var(--lv-surface-muted);
+  --lv-color-surface-inset: var(--lv-surface-inset);
+  --lv-color-fg: var(--lv-text);
+  --lv-color-fg-secondary: var(--lv-text-muted);
+  --lv-color-fg-muted: var(--lv-text-subtle);
+  --lv-color-accent: var(--lv-accent);
+  --lv-color-accent-hover: var(--lv-accent-hover);
+  --lv-color-accent-active: var(--lv-accent-active);
+  --lv-color-accent-subtle: var(--lv-selected);
+  --lv-color-accent-fg: var(--lv-accent-fg);
+  --lv-color-on-accent: var(--lv-on-accent);
+  --lv-color-border: var(--lv-border);
+  --lv-color-border-strong: var(--lv-border-strong);
+  --lv-color-hover: var(--lv-hover);
+  --lv-color-selected: var(--lv-selected);
+  --lv-color-selected-border: var(--lv-selected-border);
+  --lv-color-focus: var(--lv-focus);
+  --lv-color-success: var(--lv-success);
+  --lv-color-success-subtle: var(--lv-success-subtle);
+  --lv-color-warning: var(--lv-warning);
+  --lv-color-warning-subtle: var(--lv-warning-subtle);
+  --lv-color-danger: var(--lv-danger);
+  --lv-color-danger-subtle: var(--lv-danger-subtle);
+}
+
+/* Static Foundations Tokens */
+:root {
+  /* Typography Scale */
+  --lv-font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --lv-font-mono: ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace;
+
+  --lv-text-display: 2rem;      /* 32px */
+  --lv-text-display-lh: 2.5rem; /* 40px */
+  --lv-text-h1: 1.75rem;        /* 28px */
+  --lv-text-h1-lh: 2.25rem;     /* 36px */
+  --lv-text-h2: 1.375rem;       /* 22px */
+  --lv-text-h2-lh: 1.875rem;    /* 30px */
+  --lv-text-h3: 1.125rem;       /* 18px */
+  --lv-text-h3-lh: 1.625rem;    /* 26px */
+  --lv-text-body: 0.875rem;     /* 14px */
+  --lv-text-body-lh: 1.375rem;  /* 22px */
+  --lv-text-small: 0.8125rem;   /* 13px */
+  --lv-text-small-lh: 1.25rem;  /* 20px */
+  --lv-text-caption: 0.75rem;   /* 12px */
+  --lv-text-caption-lh: 1.125rem;/* 18px */
+
+  /* Radii Scale */
+  --lv-radius-sm: 6px;
+  --lv-radius-md: 10px;
+  --lv-radius-lg: 14px;
+  --lv-radius-xl: 18px;
+  --lv-radius-full: 9999px;
+
+  /* Spacing Scale (4px Base) */
+  --lv-space-unit: 4px;
+
+  /* Motion Timing */
+  --lv-duration-fast: 120ms;
+  --lv-duration-base: 180ms;
+  --lv-duration-slow: 240ms;
+  --lv-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Theme Switching Smooth Transition */
+[data-theme-switching],
+[data-theme-switching] * {
+  transition: background-color 220ms ease-out, border-color 220ms ease-out, color 220ms ease-out !important;
+}

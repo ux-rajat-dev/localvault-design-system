@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@import './tokens.css';
+
+@source '../';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *, [data-lv-theme='dark'], [data-lv-theme='dark'] *, .dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--lv-font-sans);
+  --font-mono: var(--lv-font-mono);
+
+  /* Color Palette */
+  --color-lv-bg: var(--lv-bg);
+  --color-lv-surface: var(--lv-surface);
+  --color-lv-surface-muted: var(--lv-surface-muted);
+  --color-lv-surface-inset: var(--lv-surface-inset);
+  --color-lv-surface-sunken: var(--lv-surface-sunken);
+  --color-lv-text: var(--lv-text);
+  --color-lv-text-muted: var(--lv-text-muted);
+  --color-lv-text-subtle: var(--lv-text-subtle);
+  --color-lv-accent: var(--lv-accent);
+  --color-lv-accent-hover: var(--lv-accent-hover);
+  --color-lv-accent-active: var(--lv-accent-active);
+  --color-lv-accent-soft: var(--lv-accent-soft);
+  --color-lv-accent-fg: var(--lv-accent-fg);
+  --color-lv-on-accent: var(--lv-on-accent);
+  --color-lv-border: var(--lv-border);
+  --color-lv-border-strong: var(--lv-border-strong);
+  --color-lv-hover: var(--lv-hover);
+  --color-lv-active: var(--lv-active);
+  --color-lv-press: var(--lv-press);
+  --color-lv-selected: var(--lv-selected);
+  --color-lv-selected-border: var(--lv-selected-border);
+  --color-lv-focus: var(--lv-focus);
+  --color-lv-neutral: var(--lv-neutral);
+  --color-lv-neutral-hover: var(--lv-neutral-hover);
+  --color-lv-backdrop: var(--lv-backdrop);
+  --color-lv-elevated: var(--lv-elevated);
+  --color-lv-inverse: var(--lv-inverse);
+  --color-lv-inverse-text: var(--lv-inverse-text);
+
+  /* Semantic Colors */
+  --color-lv-success: var(--lv-success);
+  --color-lv-success-hover: var(--lv-success-hover);
+  --color-lv-success-subtle: var(--lv-success-subtle);
+  --color-lv-success-fg: var(--lv-success-fg);
+  --color-lv-warning: var(--lv-warning);
+  --color-lv-warning-hover: var(--lv-warning-hover);
+  --color-lv-warning-subtle: var(--lv-warning-subtle);
+  --color-lv-warning-fg: var(--lv-warning-fg);
+  --color-lv-danger: var(--lv-danger);
+  --color-lv-danger-hover: var(--lv-danger-hover);
+  --color-lv-danger-active: var(--lv-danger-active);
+  --color-lv-danger-subtle: var(--lv-danger-subtle);
+  --color-lv-danger-fg: var(--lv-danger-fg);
+  --color-lv-info: var(--lv-info);
+  --color-lv-info-hover: var(--lv-info-hover);
+  --color-lv-info-subtle: var(--lv-info-subtle);
+  --color-lv-info-fg: var(--lv-info-fg);
+
+  /* Progress & Indicators Mixes */
+  --color-lv-accent-line: color-mix(in srgb, var(--lv-accent) var(--lv-border-mix), var(--lv-surface));
+  --color-lv-success-line: color-mix(in srgb, var(--lv-success) var(--lv-border-mix), var(--lv-surface));
+  --color-lv-warning-line: color-mix(in srgb, var(--lv-warning) var(--lv-border-mix), var(--lv-surface));
+  --color-lv-danger-line: color-mix(in srgb, var(--lv-danger) var(--lv-border-mix), var(--lv-surface));
+  --color-lv-info-line: color-mix(in srgb, var(--lv-info) var(--lv-border-mix), var(--lv-surface));
+  --color-lv-track: color-mix(in srgb, var(--lv-text-muted) 18%, var(--lv-surface));
+  --color-lv-skeleton: var(--lv-skeleton);
+
+  /* Radii */
+  --radius-lv-sm: var(--lv-radius-sm);
+  --radius-lv-md: var(--lv-radius-md);
+  --radius-lv-lg: var(--lv-radius-lg);
+  --radius-lv-xl: var(--lv-radius-xl);
+  --radius-lv-full: var(--lv-radius-full);
+
+  /* Shadows */
+  --shadow-lv-sm: var(--lv-shadow-sm);
+  --shadow-lv-md: var(--lv-shadow-md);
+  --shadow-lv-lg: var(--lv-shadow-lg);
+  --shadow-lv-menu: var(--lv-shadow-menu);
+  --shadow-lv-dialog: var(--lv-shadow-dialog);
+}
+
+/* LocalVault Typography Utility Classes */
+@utility text-display {
+  font-size: var(--lv-text-display);
+  line-height: var(--lv-text-display-lh);
+  font-weight: 600;
+  letter-spacing: -0.022em;
+}
+
+@utility text-h1 {
+  font-size: var(--lv-text-h1);
+  line-height: var(--lv-text-h1-lh);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+@utility text-h2 {
+  font-size: var(--lv-text-h2);
+  line-height: var(--lv-text-h2-lh);
+  font-weight: 600;
+  letter-spacing: -0.017em;
+}
+
+@utility text-h3 {
+  font-size: var(--lv-text-h3);
+  line-height: var(--lv-text-h3-lh);
+  font-weight: 600;
+  letter-spacing: -0.011em;
+}
+
+@utility text-body {
+  font-size: var(--lv-text-body);
+  line-height: var(--lv-text-body-lh);
+  font-weight: 400;
+  letter-spacing: -0.006em;
+}
+
+@utility text-small {
+  font-size: var(--lv-text-small);
+  line-height: var(--lv-text-small-lh);
+  font-weight: 400;
+  letter-spacing: -0.003em;
+}
+
+@utility text-caption {
+  font-size: var(--lv-text-caption);
+  line-height: var(--lv-text-caption-lh);
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+
+/* Spinner Keyframes */
+@keyframes lv-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.lv-spin {
+  animation: lv-spin 0.8s linear infinite;
+}
+
+/* Skeleton Shine Animation */
+@keyframes lv-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.lv-skeleton-bone {
+  background-color: var(--lv-skeleton);
+  background-image: linear-gradient(90deg, transparent 0%, var(--lv-skeleton-shine) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: lv-shimmer 1.8s ease-in-out infinite;
+}
+
+/* Base Document Reset */
+body {
+  margin: 0;
+  font-family: var(--lv-font-sans);
+  background-color: var(--lv-bg);
+  color: var(--lv-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

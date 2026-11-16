@@ -1,0 +1,55 @@
+{
+  "name": "localvault-design-system",
+  "version": "1.0.0",
+  "description": "Unified desktop-first design system and component library for LocalVault",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    },
+    "./styles": "./src/styles/globals.css",
+    "./tokens": "./src/styles/tokens.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "localvault",
+    "design-system",
+    "react",
+    "typescript",
+    "tailwind",
+    "magic-patterns"
+  ],
+  "author": "LocalVault Team",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "11.18.2",
+    "lucide-react": "0.577.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwind-merge": "2.6.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^20.17.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "6.1.1",
+    "happy-dom": "^21.0.4",
+    "tailwindcss": "4.3.1",
+    "typescript": "5.9.3",
+    "vite": "8.3.2",
+    "vitest": "^2.1.8"
+  }
+}
